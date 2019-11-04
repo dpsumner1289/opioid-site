@@ -7,8 +7,8 @@ if(!function_exists('handle_authentication')) {
         $md5pass = filter_var($_POST['otf'], FILTER_SANITIZE_STRING);
         $email = trim($email);
         $md5pass = trim($md5pass);
-        // $remember = $_POST['remember'];
-        $global_pass = 'o7fus3rp455';
+        // changed for security purposes for Github
+        $global_pass = 'XXXXXXXX';
         // check for password variation
         if(!empty($email) && md5($global_pass) === $md5pass) {
             $username = $email;
