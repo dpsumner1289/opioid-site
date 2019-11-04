@@ -1,0 +1,123 @@
+form.hero-search {
+    .search-field {
+        display: inline-block;
+        text-align: center;
+        padding: 3px 0;
+        width: 100%;
+        margin-right: auto;
+        background: transparent;
+        border-radius: 33px;
+        border: 1px solid $gray;
+        i, input, button {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        i {
+            @include ease();
+            padding: 16px;
+            background-color: transparent;
+            color:$gray;
+        }
+        input {
+            height: 48px;
+            width:calc(100% - 108px);
+            border: none;
+            background-color: transparent;
+            color:$gray;
+            @include font-reg("21px");
+            padding-top: 9px;
+        }
+        button {
+            padding: 0;
+            margin: 0;
+            border: none;
+            background-color: $blue;
+            border-radius: 50%;
+            cursor: pointer;
+            i {
+                color: #fff;
+            }
+            &:hover {
+                i {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+        &:hover {
+            >i {
+                transform: scale(1.1);
+            }
+        }
+    }
+    // a.toggle-options {
+    //     width: 23%;
+    //     display: inline-block;
+    //     margin-left: auto;
+    //     padding-left: 18px;
+    //     color: $darkblue;
+    //     i {
+    //         @include ease();
+    //         margin-left: 6px;
+    //     }
+    //     &.open {
+    //         i {
+    //             transform: rotate(-180deg);
+    //         }
+    //     }
+    // }
+}
+.results-summary {
+    &.style {
+        @include font-bold('42px');
+        position: relative;
+        margin: 72px 0 33px;
+        padding-bottom: 18px;
+        text-align: center;
+        span {
+            color: $blue;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 6px;
+            background-color: $blue;
+            left: 50%;
+            bottom: 0;
+            margin-left: -100px;
+        }
+    }
+}
+div.subscribe {
+    text-align: center;
+    a {
+        color: $green;
+        font-size: 16px;
+        i {
+            @include ease();
+            margin-right: 3px;
+        }
+        &:hover {
+            color: $blue;
+            i {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+.save-confirmation {
+    @include font-reg("27px");
+	position: fixed;
+	width: 200px;
+    height: 100px;
+    padding-top: 9px;
+	left: 50%;
+	margin-left: -100px;
+	text-align: center;
+	background-color: rgba(0,0,0,.75);
+	color: #fff;
+	border-radius: 12px;
+	top: 50vh;
+	margin-top: -50px;
+	text-transform: uppercase;
+}

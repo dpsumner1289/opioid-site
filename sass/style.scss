@@ -1,0 +1,44 @@
+/*!
+Theme Name: CHIME OTF
+Author: build/create
+Author URI: http://buildcreate.com
+Description: a highly customized wordpress theme by build/create studios
+Version: 2.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: build-create
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+// foundation styling
+@import "partials/base/fonts";
+@import "partials/base/variables";
+@import "partials/base/normalize";
+
+@import "partials/functionality/mixins";
+@import "partials/base/base";
+
+@import "partials/base/globals";
+
+// structure
+@import "partials/structure/flex";
+@import "partials/structure/wrappers";
+
+// site sections
+@import "partials/site-sections/header";
+@import "partials/site-sections/footer";
+
+// modular components
+@import "partials/modules/home-hero";
+@import "partials/modules/topic-grid";
+@import "partials/modules/cta";
+@import "partials/modules/physician-stories";
+@import "partials/modules/resource-feed";
+@import "partials/modules/filtering";
+@import "partials/modules/resource-search";
+@import "partials/modules/single";
+@import "partials/modules/playbook";
+@import "partials/modules/submit-content";
+@import "partials/modules/saved-searches";
+@import "partials/modules/contact";
+@import "partials/modules/sponsors";

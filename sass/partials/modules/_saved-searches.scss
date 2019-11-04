@@ -1,0 +1,158 @@
+div.saved-searches {
+    position: absolute;
+    display:none;
+    border-top: 15px solid $blue;
+    box-shadow: 0px 0px 7px #c3c3c3;
+    background-color: #fff;
+    padding:18px 27px;
+    width: 930px;
+    max-width: 100%;
+    top:25%;
+    z-index: -9;
+    left:50%;
+    margin-left: -415px;
+    h3 {
+        @include font-bold('40px');
+        @include line-sep('100px', $blue);
+        color: $blue;
+        margin-top: 18px;
+    }
+    .saved-search {
+        padding: 9px 0 6px;
+        &:not(:last-child) {
+            border-bottom: 1px solid $lightgray;
+        }
+        .phrase {
+            color:$blue;
+            @include font-reg('20px');
+            width:calc(50% - 10px);
+        }
+        .date {
+            color: $gray;
+            font-style: italic;
+            font-size: 16px;
+            width:calc(50% - 10px);
+        }
+        a.delete-search {
+            color: $orange;
+            width:20px;
+            i {
+                @include ease();
+            }
+            &:hover {
+                i {
+                    animation: interspin 1.3s infinite;
+                }
+            }
+        }
+    }
+    &.deleting {
+        border-color: $orange;
+        max-width: 780px;
+        margin-left: -390px;
+        padding-top: 42px;
+        .delete-all-data {
+            padding-bottom: 42px;
+            h4 {
+                @include font-bold("39px");
+                color: $red;
+                margin-top: 0;
+                margin-bottom: 18px;
+            }
+            .cont {
+                font-weight: light;
+                font-style: italic;
+                font-size: 18px;
+            }
+            p {
+                margin: 0;
+                padding-left: 12px;
+            }
+        }
+        .action-row {
+            padding-top: 21px;
+            padding-bottom: 12px;
+            border-top: 1px solid #EEEEEE;
+            a {
+                font-size: 18px;
+                font-weight: bold;
+                color: $orange;
+                &.cancel {
+                    margin-left: 27px;
+                }
+            }
+        }
+    }
+    &.login {
+        width:780px;
+        margin-left: -390px;
+        form {
+            position: relative;
+            width: 55%;
+            margin-top: 21px;
+            i.mail-icon {
+                position: absolute;
+                color: $lightgray;
+                left: 12px;
+                top: 14px;
+                font-size: 21px;
+            }
+            input[name="otf_user_email"] {
+                @include font-reg("20px");
+                color: $lightgray;
+                width: 100%;
+                border: 1px solid $lightgray;
+                border-radius: 36px;
+                padding: 15px 15px 9px 42px;
+            }
+            button {
+                @include ease();
+                cursor: pointer;
+                border: none;
+                background-color: $blue;
+                color: white;
+                border-radius: 100%;
+                padding: 13px 16px;
+                position: absolute;
+                top: 2.5px;
+                right: 3px;
+                i {
+                    @include ease();
+                }
+                &:hover {
+                    i {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+        .privacy {
+            font-size: 16px;
+            color: $lightgray;
+            font-style: italic;
+            padding: 30px 0;
+            width: 100%;
+            max-width: 450px;
+            line-height: 1.5;
+        }
+        .action-row {
+            width: 100%;
+            padding-top: 21px;
+            padding-bottom: 12px;
+            border-top: 1px solid #EEEEEE;
+            > a {
+                font-size: 18px;
+                font-weight: bold;
+                color: $orange;
+                &.cancel {
+                    margin-left: 27px;
+                }
+            }
+        }
+    }
+    @include breakpoint(laptop) {
+        width:90% !important;
+        left:5% !important;
+        margin-left: 0 !important;
+    }
+}

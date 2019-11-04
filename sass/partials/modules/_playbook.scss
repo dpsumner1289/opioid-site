@@ -1,0 +1,122 @@
+.playbook_hero {
+    position: relative;
+    background-position: 50%;
+    background-size: cover;
+    .color_layer {
+        padding-bottom: 210px;
+    }
+    .container {
+        min-height: 69vh;
+    }
+    h1 {
+        @include line-sep();
+        padding-bottom: 12px;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 24px;
+        max-width:100%;
+        div.small {
+            font-family: 'Lato', sans-serif;
+            font-size: 75px;
+            font-weight: bold;
+            color: #fff;
+            display:block;
+        }
+        div.large {
+            @include font-bold('156px');
+            color: $blue;
+            display:block;
+            line-height: 123px;
+            padding-top: 33px;
+            padding-right: 6px;
+        }
+        &:after {
+            width:100%;
+            background-color: $blue;
+            bottom: 0;
+        }
+    }
+    .intro {
+        @include font-bold('20px');
+        line-height: 1.5;
+        text-align: center;
+    }
+    @include breakpoint(phablet) {
+        h1 {
+            div.small {
+                font-size: 20vw;
+            }
+            div.large {
+                font-size: 25vw;
+            }
+        }
+    }
+}
+.chapters {
+    .container {
+        margin-top: -210px;
+        position: relative;
+        z-index: 1;
+        background-color: #fff;
+        >h2 {
+            @include font-bold('60px');
+            text-transform: uppercase;
+            color: $blue;
+            text-align: center;
+            margin: 42px 0 72px;
+            width: 100%;
+        }
+        .chapter {
+            margin: 40px 0;
+            width:100%;
+            .chapter-posts {
+                padding-left: 72px;
+                h3 {
+                    @include font-bold('40px');
+                    text-transform: uppercase;
+                    margin-top: 0;
+                    color:#707070;
+                    padding-bottom: 15px;
+                    margin-bottom: 9px;
+                    width: 100%;
+                    border-bottom: 1px solid $blue;
+                }
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    li {
+                        padding: 0;
+                        margin: 30px 0 0;
+                        line-height: 1.4;
+                        color: $blue;
+                        i {
+                            padding-top: 6px;
+                        }
+                        a {
+                            font-size: 18px;
+                            font-weight: lighter;
+                            padding-left: 6px;
+                            display: inline-block;
+                            width: calc(100% - 16px);
+                            vertical-align: top;
+                            color: $blue;
+                            &:hover {
+                                color: $green;
+                                padding-left: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+            @include breakpoint(phablet) {
+                .chapter-posts {
+                    padding-left: 0;
+                }
+                .chapter-image {
+                    margin-bottom: 27px;
+                }
+            }
+        }
+    }
+}

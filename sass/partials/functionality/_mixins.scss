@@ -1,0 +1,150 @@
+// font family calls
+@mixin font-reg($size:'') {
+	@if($size != '') {
+		font-size: unquote($size);
+	}
+	font-family: $trade_regular;
+}
+@mixin font-bold($size:'') {
+	@if($size != '') {
+		font-size: unquote($size);
+	}
+	font-family: $trade_bold;
+}
+
+// line seperators
+@mixin line-sep($width:'', $color:'') {
+	position: relative;
+	padding-bottom: 10px;
+	&:after {
+		content:'';
+		position: absolute;
+		left: 0;
+		bottom: -10px;
+		height: 6px;
+		@if($width !='') {
+			width:unquote($width);
+		}@else {
+			width:150px;
+		}
+		@if($color !='') {
+			background-color:$color;
+		}@else {
+			background-color: $lightgray;
+		}
+	}
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// Inline Styling
+
+@mixin inline($alignment) {
+	display: inline-block;
+    vertical-align: $alignment;
+}
+
+// Easing
+
+@mixin ease() {
+	transition:.3s all ease;
+
+	&:hover{
+		transition: .3s all ease;
+	}
+}
+
+// gradients
+@mixin gradient-beige() {
+	background: rgb(248,246,231);
+	background: linear-gradient(90deg, rgba(248,246,231,1) 0%, rgba(255,255,255,1) 100%); 
+}
+
+// Arrow animation
+@mixin arrow() {
+	i.fa , i.fas, i.fad {
+		margin-left:8px;
+		@include ease();
+	}
+	&:hover {
+		i.fa, i.fas, i.fad {
+			margin-left:20px;
+		}
+	}
+}
+
+// Caption animation
+
+@mixin hover-caption($parentClass, $appear, $grow, $grow-size, $duration) {
+	#{$parentClass} {
+		position: relative;
+		overflow: hidden;
+
+		#{$appear}{
+			position: absolute;
+			bottom: -100%;
+			transition: $duration all ease;
+		}
+
+		#{$grow} {
+			transition: $duration all ease;
+		}
+
+		&:hover {
+			> #{$appear}{
+				transition: $duration all ease;
+				bottom:0;
+			}
+			> #{$grow}{
+				transition: $duration all ease;
+				transform: scale($grow-size);
+			}
+		}
+	}
+}
+
+// Responsive breakpoints 
+
+@mixin breakpoint($point) {
+	@if $point == desktop {
+		@media (max-width: 70em) { @content ; }
+		// 1120px
+	}
+	@else if $point == laptop {
+		@media (max-width: 64em) { @content ; }
+		// 1024px
+	}
+	@else if $point == tablet {
+		@media (max-width: 50em) { @content ; }
+		// 800px
+	}
+	@else if $point == phablet {
+		@media (max-width: 37.5em)  { @content ; }
+		// 600px
+	}
+	@else if $point == mobileonly {
+		@media (max-width: 37.5em)  { @content ; }
+		// 600px
+	}
+	@else if $point == mobile {
+		@media (max-width: 31.25em)  { @content ; }
+		// 600px
+	}
+}

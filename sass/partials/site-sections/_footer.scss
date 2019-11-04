@@ -1,0 +1,58 @@
+.site-footer {
+    background-color:$darkblue;
+    color: #fff;
+    border-bottom: 7px solid $lightgray;
+    font-size: 16px;
+    .container {
+        padding-bottom: 12px;
+    }
+    .right {
+        margin-left: auto;
+    }
+    .blurb {
+        padding-right: 12px;
+        font-size: 20px;
+    }
+    .copy {
+        text-transform: uppercase;
+        @include font-reg();
+        margin-top: 18px;
+        a {
+            color:$blue;
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+    .footer-menu {
+        a {
+            @include font-reg();
+            color: $green;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            &:hover {
+                color:#fff;
+            }
+        }
+    }
+    @include breakpoint(laptop) {
+        div.right {
+            margin: 57px auto 21px;
+        }
+        div.left {
+            margin: 0 auto;
+        }
+        div.copy {
+            justify-content: center;
+        }
+    }
+    @include breakpoint(tablet) {
+        .blurb {
+            text-align: center;
+            padding: 0;
+        }
+        .button {
+            margin: 21px auto 0;
+        }
+    }
+}

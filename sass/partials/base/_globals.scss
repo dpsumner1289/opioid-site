@@ -1,0 +1,159 @@
+// links
+a {
+    @include ease();
+    color: $blue;
+    text-decoration: none;
+    &:hover {
+        color: $green;
+    }
+    &.button {
+        @include font-reg();
+        padding: 14px 18px 12px;
+        border: 1px solid;
+        border-radius: 25px;
+        text-transform: uppercase;
+        text-align: center;
+        i {
+            @include ease();
+            margin-left: 10px;
+        }
+        &.wtg {
+            color:#fff;
+            &:hover {
+                color:$green;
+            }
+        }
+        &.gtb {
+            color: #fff;
+            background-color: $green;
+            border-color: $green;
+            &:hover {
+                border-color: $blue;
+                background-color: $blue;
+            }
+        }
+        &.wgtgw {
+            color: $green;
+            border-color: $green;
+            &:hover {
+                color: #fff;
+                background-color: $green;
+            }
+        }
+        &.rtw {
+            color: $red;;
+            border-color:$red;
+            &:hover {
+                color: #fff;
+                background-color:$red;
+            }
+        }
+        &.moreposts {
+            margin: 33px auto 0;
+            max-width: 400px;
+            width: 100%;
+            font-size: 30px;
+            border-radius: 36px;
+            padding-top: 18px;
+        }
+        &:hover {
+            i {
+                margin-left: 15px;
+            }
+        }
+    }
+    &.hidden-arrow {
+        i {
+            @include ease();
+            color:transparent;
+            margin-left: 0;
+        }
+        &:hover {
+            i {
+                color:inherit;
+                margin-left: 10px;
+            }
+        }
+    }
+    &.cancel {
+        position: relative;
+        z-index: 1;
+        i {
+            @include ease();
+            position: relative;
+            z-index: 0;
+            color:transparent;
+            margin-right: -10px;
+        }
+        &:hover {
+            i {
+                color:inherit;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+label.custom-check {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ .checkmark {
+            background-color: #fff;
+            &:after {
+                display: block;
+            }
+        }
+    }
+    .checkmark {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #fff;
+        border: 1px solid $orange;
+        border-radius: 3px;
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 8px;
+            top: 4px;
+            width: 5px;
+            height: 10px;
+            border: solid $orange;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+}
+
+// gradients
+.btw {
+    background: rgb(248,246,231);
+    background: linear-gradient(180deg, rgba(248,246,231,1) 0%, rgba(255,255,255,1) 100%); 
+}
+.gtw {
+    background: rgb(231,235,248);
+    background: linear-gradient(175deg, rgba(231,235,248,1) 0%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 100%); 
+}
+.gtw-t {
+    background: rgb(218,229,245);
+    background: linear-gradient(180deg, rgba(218,229,245,1) 0%, rgba(219,230,245,0.93) 34%, rgba(255,255,255,0.7) 100%); 
+}

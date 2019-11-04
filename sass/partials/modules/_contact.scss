@@ -1,0 +1,100 @@
+div.contact-form {
+    display: none;
+	position: fixed;
+	width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+    overflow-y: scroll;
+	z-index: 999999;
+	background: white;
+	left: 0;
+    top: 0;
+    >.container {
+        min-height: 100vh;
+    }
+    h2 {
+        @include font-bold("60px");
+        @include line-sep("96px", $blue);
+        margin-top: 0;
+        &:after {
+            left: 50%;
+            margin-left: -48px;
+        }
+    }
+    a#close-popup {
+        color: #353124;
+        position: absolute;
+        top: 21px;
+        right:21px;
+        font-size: 60px;
+        i {
+            @include ease();
+        }
+        &:hover {
+            i {
+                animation: interspin 1.3s infinite;
+            }
+        }
+    }
+    div.contact-blurb {
+        color: $blue;
+        font-size: 21px;
+        p {
+            margin: 0;
+        }
+    }
+    
+    .gform_description {
+		font-size: 22px;
+		font-weight: light;
+		color: $blue;
+		text-align: center;
+		margin-bottom: 1.5em;
+		border-top: 1px solid #eee;
+		padding-top: 1em;
+	}
+    
+    
+    form {
+        input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
+            padding: 18px 9px 12px;
+        }
+        .gform_body {
+            input[type="text"], textarea {
+                border: 1px solid #707070;
+                border-radius: 4px;
+                font-family: "TradeGothicLTStd-Cn18" !important;
+                font-size: 20px !important;
+            }
+            .gfield {
+                margin-top: 0;
+                span.name_first {
+                    padding-right: 0;
+                }
+                .ginput_container_textarea {
+                    margin-top: 30px;
+                }
+            }
+        }
+        .gform_footer {
+            input.gform_button {
+                @include ease();
+                @include font-bold("27px");
+                cursor: pointer;
+                width: 100%;
+                outline: none;
+                box-shadow: none;
+                padding: 15px 9px 6px;
+                background: $green;
+                color: #fff;
+                border-radius: 36px;
+                border: 1px solid $green;
+                text-transform: uppercase;
+                &:hover {
+                    color: $green;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}

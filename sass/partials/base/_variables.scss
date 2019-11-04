@@ -1,0 +1,31 @@
+// colors
+$green: #ACBD49;
+$blue: #2F87C7;
+$darkblue: #1D2A3A;
+$beige: #F8F6E7;
+$lightgray: #707070;
+$gray: #6D6E71;
+$red: #B43A16;
+$orange:#D05021;
+
+// fonts
+$trade_regular: 'TradeGothicLTStd-Cn18';
+$trade_bold: 'TradeGothicLTStd-BdCn20';
+
+// animations
+@-webkit-keyframes interspin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@-moz-keyframes interspin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@-o-keyframes interspin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes interspin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
